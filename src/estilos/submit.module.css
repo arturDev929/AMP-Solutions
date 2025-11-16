@@ -1,0 +1,18 @@
+@import '../App.css';
+.submitButton{
+    background-color: var(--color-primary) !important;
+    color: var(--text-primary) !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s, color 0.3s !important;
+    box-shadow: 2px 2px !important;
+}
+.submitButton:hover{
+    background-color: var(--color-secundary) !important; 
+    color: var(--text-secundary) !important;
+    outline: 2px solid var(--color-primary) !important; 
+    font-weight: bolder !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,8 @@
+@import '../App.css';
+.input{
+    outline: 1px solid var(--color-primary) !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    color: var(--text-secundary) !important;
+    border:none !important ;
+}
