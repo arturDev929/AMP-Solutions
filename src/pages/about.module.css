@@ -1,0 +1,14 @@
+@import "../App.css";
+
+.cardContainer{
+    background: var(--color-secundary) !important;
+}
+.title {
+  color: var(--text-secundary) !important;
+}
+.subtitle {
+  color: var(--text-tercery) !important;
+}
+.conteudo{
+    text-indent: var(--paragrafo);
+}

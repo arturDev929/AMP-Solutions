@@ -1,5 +1,5 @@
 import { useState} from 'react';
-import BtnModal from '../estilos/BtnModal';
+import Button from '../estilos/BtnModal';
 import Modal from '../estilos/Modal';
 import styles from './header.module.css';
 
@@ -47,7 +47,7 @@ function Header() {
 
             {/* Botões de Ação Desktop */}
             <div className="d-flex align-items-center">
-              <BtnModal />
+              <Button value="Entrar" modal="#ModalLogin"  className={styles.login} />
             </div>
           </div>
         </div>
@@ -108,7 +108,6 @@ function Header() {
           </li>
         </ul>
       </nav>
-
       <Modal />
     </>
   );

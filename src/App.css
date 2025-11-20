@@ -11,6 +11,8 @@
  --text-tercery: #000000;
 
  --background:linear-gradient(45deg, var(--color-secundary), var(--color-primary));
+
+ --paragrafo: 2em;
 } 
 *{
     color: var(--text-tercery);

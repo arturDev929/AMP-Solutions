@@ -1,0 +1,7 @@
+@import "../App.css";
+.card{
+    background: var(--color-secundary) !important;
+}
+.text{
+    color: var(--text-secundary) !important;
+}

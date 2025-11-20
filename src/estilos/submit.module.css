@@ -10,9 +10,8 @@
     box-shadow: 2px 2px !important;
 }
 .submitButton:hover{
-    background-color: var(--color-secundary) !important; 
-    color: var(--text-secundary) !important;
-    outline: 2px solid var(--color-primary) !important; 
-    font-weight: bolder !important;
-    box-shadow: none !important;
+     transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px var(--color-primary) !important;
+  color: var(--color-primary) !important;
+  background: var(--color-secundary) !important;
 }
