@@ -1,0 +1,36 @@
+@import "../App.css";
+
+.cardContainer{
+    background: var(--color-secundary) !important;
+}
+
+.container{
+  animation: fadeInBottomToTop 1s ease-in-out;
+  animation-name: fadeInBottomToTop;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; /* mantém o estado final */
+}
+
+.title {
+  color: var(--text-secundary) !important;
+}
+
+.subtitle {
+  color: var(--text-tercery) !important;
+}
+
+.conteudo{
+    text-indent: var(--paragrafo);
+}
+
+@keyframes fadeInBottomToTop {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

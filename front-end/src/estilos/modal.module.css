@@ -1,0 +1,13 @@
+@import "../App.css";
+
+.modal{
+    background: var(--color-secundary) !important;
+    border-radius: 10px !important;
+}
+.logintxt{
+    color: var(--color-primary) !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+}

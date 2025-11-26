@@ -1,0 +1,321 @@
+@import "../App.css";
+
+/* Services Section */
+.servicesSection {
+  padding: 100px 0;
+  background: #ffffff;
+  animation: fadeInBottomToTop 1s ease-in-out;
+  animation-name: fadeInBottomToTop;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-tercery);
+}
+
+.titleHighlight {
+  background: var(--color-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionSubtitle {
+  font-size: 1.1=rem;
+  color: var(--text-tercery); 
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Service Cards */
+.serviceCard {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: var(--color-secundary);
+  box-shadow: var(--color-primary);
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--color-secundary);
+}
+.cardHeader {
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.iconContainer {
+  width: 80px;
+  height: 80px;
+  background:var(--color-secundary) ;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  backdrop-filter: var(--color-primary);
+}
+
+.iconContainer i {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: var(--text-tercery);
+  margin-bottom: 1rem;
+}
+
+.cardDescription {
+  color: var(--text-tercery);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.featuresSection {
+  margin-bottom: 2rem;
+}
+
+.featuresTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-tercery);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.featureItem i {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.cardFooter {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.register {
+  background: var(--color-primary) !important;
+  border: none !important;
+  color: var(--color-secundary) !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 10px !important;
+  font-weight: 600  !important;
+  transition: all 0.3s ease !important;
+  flex: 1 !important;
+  min-width: 140px !important;
+}
+
+.register:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px var(--color-primary) !important;
+  color: var(--color-primary) !important;
+  background: var(--color-secundary) !important;
+}
+/*
+.secondaryButton {
+  border: 2px solid #e9ecef;
+  background: transparent;
+  color: #6c757d;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 120px;
+}
+
+.secondaryButton:hover {
+  border-color: #667eea;
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
+} */
+
+/* Process Section */
+.processSection {
+  padding: 100px 0;
+  background: white;
+  animation: fadeInBottomToTop 1s ease-in-out;
+  animation-name: fadeInBottomToTop;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.processStep {
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.stepNumber {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #f8f9fa;
+  z-index: 1;
+  line-height: 1;
+}
+
+.stepIcon {
+  width: 80px;
+  height: 80px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.stepIcon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+}
+
+.stepDesc {
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+}
+
+.ctaTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ctaSubtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  background: #ff6b6b;
+  border: none;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+  color: white;
+  background: #ff5252;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .statsContainer {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .cardFooter {
+    flex-direction: column;
+  }
+  
+  .ctaTitle {
+    font-size: 1.75rem;
+  }
+  
+  .ctaSection .row {
+    text-align: center;
+  }
+  
+  .ctaSection .text-lg-end {
+    text-align: center !important;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroSection {
+    padding: 80px 0 60px;
+  }
+  
+  .servicesSection,
+  .processSection {
+    padding: 60px 0;
+  }
+  
+  .statsContainer {
+    gap: 1.5rem;
+  }
+  
+  .statItem {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+@keyframes fadeInBottomToTop {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

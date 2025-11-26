@@ -1,0 +1,11 @@
+# Ignorar node_modules em qualquer pasta
+node_modules/
+*/node_modules/
+
+# Ignorar .env em qualquer pasta
+.env
+*/.env
+
+# Outros arquivos a ignorar
+.DS_Store
+*.log

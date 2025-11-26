@@ -1,0 +1,327 @@
+@import '../App.css';
+
+.heroSection {
+    background: 
+        radial-gradient(ellipse at 20% 30%, #0a0e2a 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, #1a1f4b 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, #050816 0%, #000000 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="1" fill="white" opacity="0.8"/><circle cx="600" cy="300" r="0.8" fill="white" opacity="0.6"/><circle cx="800" cy="600" r="1.2" fill="white" opacity="0.9"/><circle cx="300" cy="700" r="0.7" fill="white" opacity="0.5"/><circle cx="900" cy="150" r="0.5" fill="white" opacity="0.4"/></svg>') repeat;
+    position: relative;
+    overflow: hidden;
+        animation: fadeInBottomToTop 1s ease-in-out;
+  animation-name: fadeInBottomToTop;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.heroSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(74, 107, 255, 0.2) 0%, transparent 30%),
+        radial-gradient(circle at 70% 80%, rgba(255, 74, 158, 0.15) 0%, transparent 25%),
+        radial-gradient(circle at 50% 50%, rgba(74, 255, 207, 0.1) 0%, transparent 20%);
+    animation: galaxyFloat 20s ease-in-out infinite;
+    mix-blend-mode: screen;
+}
+@keyframes fadeInBottomToTop {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Container do Robô */
+.robotContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    pointer-events: none;
+}
+
+/* Cabeça do Robô */
+.robotHead {
+    position: relative;
+    width: 120px;
+    height: 140px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+    border-radius: 25px 25px 30px 30px;
+    border: 4px solid #1a252f;
+    box-shadow: 
+        0 0 30px rgba(74, 107, 255, 0.4),
+        inset 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+/* Container dos Olhos */
+.eyesContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px 0px 20px;
+    gap: 15px;
+}
+
+/* Olhos do Robô */
+.eye {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+    border-radius: 50%;
+    border: 3px solid #1a252f;
+    overflow: hidden;
+    transition: transform 0.1s ease-out;
+    box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.2),
+        0 0 15px rgba(74, 107, 255, 0.3);
+}
+
+.pupil {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.pupil::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(74, 255, 207, 0.8);
+    border-radius: 50%;
+    top: 30%;
+    left: 30%;
+    filter: blur(1px);
+}
+
+/* Boca do Robô */
+.mouth {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 8px;
+    background: linear-gradient(90deg, #1a252f 0%, #34495e 50%, #1a252f 100%);
+    border-radius: 4px;
+    border: 2px solid #1a252f;
+    box-shadow: 0 0 10px rgba(74, 107, 255, 0.3);
+}
+
+.mouth::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    width: 30px;
+    height: 2px;
+    background: rgba(74, 255, 207, 0.6);
+    border-radius: 1px;
+    animation: mouthGlow 2s ease-in-out infinite;
+}
+
+/* Antenas */
+.antennaLeft, .antennaRight {
+    position: absolute;
+    top: -25px;
+    width: 4px;
+    height: 25px;
+    background: linear-gradient(180deg, #34495e 0%, #2c3e50 100%);
+    border-radius: 2px 2px 0 0;
+}
+
+.antennaLeft {
+    left: 30px;
+    transform: rotate(-5deg);
+}
+
+.antennaRight {
+    right: 30px;
+    transform: rotate(5deg);
+}
+
+.antennaLeft::after, .antennaRight::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -3px;
+    width: 10px;
+    height: 10px;
+    background: rgba(74, 255, 207, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(74, 255, 207, 0.6);
+    animation: antennaGlow 2s ease-in-out infinite alternate;
+}
+
+/* Corpo do Robô */
+.robotBody {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    border-radius: 20px;
+    border: 4px solid #1a252f;
+    box-shadow: 
+        0 0 25px rgba(74, 107, 255, 0.3),
+        inset 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.chestPanel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+}
+
+.panelLight {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #34495e;
+    border: 2px solid #1a252f;
+    animation: panelLights 3s ease-in-out infinite;
+}
+
+.panelLight:nth-child(1) { animation-delay: 0s; }
+.panelLight:nth-child(2) { animation-delay: 1s; }
+.panelLight:nth-child(3) { animation-delay: 2s; }
+
+/* Efeitos de fundo (mantidos do anterior) */
+.techParticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(74, 255, 207, 0.4) 1px, transparent 2px),
+        radial-gradient(circle at 75% 75%, rgba(74, 107, 255, 0.3) 1px, transparent 2px);
+    background-size: 300px 300px, 400px 400px;
+    animation: particleFloat 15s infinite linear;
+    pointer-events: none;
+}
+
+.circuitGrid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(90deg, rgba(74, 107, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(74, 107, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s infinite linear;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.quantumParticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.9) 1px, transparent 2px),
+        radial-gradient(circle at 75% 45%, rgba(255, 255, 255, 0.8) 1px, transparent 2px);
+    background-size: 200px 200px, 150px 150px;
+    animation: starTwinkle 8s infinite ease-in-out;
+}
+
+.glowEffect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: 
+        radial-gradient(circle at center, rgba(74, 107, 255, 0.05) 0%, transparent 50%);
+    animation: nebulaPulse 18s ease-in-out infinite;
+    mix-blend-mode: overlay;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 20;
+}
+
+.heroTitle {
+    background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 50px rgba(99, 102, 241, 0.5);
+    font-weight: 800;
+}
+
+.heroSubtitle {
+    color: #c7d2fe;
+    text-shadow: 0 0 25px rgba(99, 102, 241, 0.3);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* ANIMAÇÕES */
+@keyframes mouthGlow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+@keyframes antennaGlow {
+    0% { opacity: 0.4; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes panelLights {
+    0%, 100% { background: #34495e; }
+    50% { background: rgba(74, 255, 207, 0.8); box-shadow: 0 0 10px rgba(74, 255, 207, 0.6); }
+}
+
+@keyframes particleFloat {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+@keyframes galaxyFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+    50% { transform: translate(10px, -5px) scale(1.05); opacity: 0.6; }
+}
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+@keyframes nebulaPulse {
+    0%, 100% { opacity: 0.03; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.08; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.btn{
+    background-color:var(--color-primary) !important;
+    color: var(--text-primary) !important;
+    transition: background-color 0.3s, color 0.3s !important;
+}
+.btn:hover{
+    background-color: var(--color-secundary) !important;
+    color: var(--text-secundary) !important;
+}

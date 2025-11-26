@@ -1,0 +1,318 @@
+@import '../App.css';
+
+.navbar {
+  background-color: var(--color-primary);
+  color: var(--text-tercery);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de fundo tecnológico */
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 98%, rgba(74, 144, 226, 0.1) 100%),
+    linear-gradient(0deg, transparent 98%, rgba(74, 144, 226, 0.1) 100%);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Efeito de partículas digitais */
+.navbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(74, 144, 226, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(74, 144, 226, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(74, 144, 226, 0.05) 0%, transparent 50%);
+  animation: techPulse 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes techPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-secundary);
+  border-radius: 10px;
+  color: var(--text-secundary);
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  box-shadow: 
+    0 0 15px var(--color-secundary),
+    0 4px 6px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.nav_link {
+  color: var(--text-primary) !important;
+  font-weight: bolder;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  padding: 8px 16px !important;
+  border-radius: 6px;
+}
+
+.nav_link:hover {
+  color: var(--color-secundary) !important;
+  background: rgba(74, 144, 226, 0.1);
+  transform: translateY(-1px);
+}
+
+.nav_link.active {
+  color: var(--color-secundary) !important;
+  background: rgba(74, 144, 226, 0.1);
+}
+
+/* Efeito de linha tecnológica ativa */
+.nav_link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-secundary), #4a90e2);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav_link:hover::after,
+.nav_link.active::after {
+  width: 80%;
+}
+
+.text {
+  color: var(--text-primary) !important;
+  position: relative;
+  z-index: 1;
+  padding-left: 5px;
+}
+
+.login {
+  border-radius: 5px !important;
+  border: 2px solid var(--color-secundary) !important;
+  color: var(--text-primary) !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  z-index: 1;
+}
+
+.login:hover {
+  background-color: var(--color-secundary) !important;
+  color: var(--text-secundary) !important;
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Botão Entrar Mobile */
+.mobileLogin {
+  display: none;
+}
+
+.mobileLogin .login {
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+}
+
+/* Efeito de conexões em rede */
+.techGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(74, 144, 226, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 144, 226, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Container principal para garantir que o conteúdo fique acima dos efeitos */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== NAVBAR INFERIOR MOBILE ===== */
+.mobileBottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-primary);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 8px 0;
+  display: none;
+}
+
+.mobileNavItems {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobileNavItem {
+  flex: 1;
+  text-align: center;
+}
+
+.mobileNavLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 4px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.mobileNavLink.mobileLoginBtn {
+  background: transparent;
+  border: none;
+}
+
+.mobileNavIcon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  background: #ffffff;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transition: all 0.3s ease;
+}
+
+.mobileNavLabel {
+  font-size: 10px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.mobileNavLink.active .mobileNavIcon {
+  transform: translateY(-2px);
+  background: var(--color-secundary);
+}
+
+.mobileNavLink.active .mobileNavLabel {
+  color: var(--color-secundary);
+  font-weight: 600;
+}
+
+.mobileNavLink:hover .mobileNavIcon {
+  transform: translateY(-1px);
+  background: var(--color-secundary);
+}
+
+.mobileNavLink:hover .mobileNavLabel {
+  color: var(--color-secundary);
+}
+
+/* Ícones SVG */
+.iconHome { mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/%3E%3C/svg%3E"); }
+.iconServices { mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 3l1 1v10l-1 1h-4v4l-1 1h-4l-1-1v-4H5l-1-1V4l1-1h14m0-2H5L3 3v10l2 2h4v4l2 2h4l2-2v-4h4l2-2V3l-2-2z'/%3E%3C/svg%3E"); }
+.iconProjects { mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 3v18h18V3H3zm9 15l-5-5 1.41-1.41L12 15.17l3.59-3.58L17 13l-5 5z'/%3E%3C/svg%3E"); }
+.iconAbout { mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E"); }
+.iconLogin { mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 17v-3H3v-4h7V7l5 5-5 5zm9-12h-4v2h4v12h-4v2h4c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E"); }
+
+/* Ajustes de responsividade */
+@media (max-width: 991.98px) {
+  .navbarNav {
+    background: var(--color-primary);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+  }
+  
+  .mobileLogin {
+    display: block;
+    position: absolute;
+    right: 60px; /* Espaço para o toggle */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .mobileBottomNav {
+    display: block;
+    background: var(--color-primary);
+  }
+  
+  /* Move o navbar para baixo do conteúdo */
+  .navbar {
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  /* Ajusta o container do menu mobile */
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-primary);
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+}
+
+@media (min-width: 992px) {
+  .mobileBottomNav {
+    display: none !important;
+  }
+  
+  .mobileLogin {
+    display: none !important;
+  }
+}

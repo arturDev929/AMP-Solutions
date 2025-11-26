@@ -1,0 +1,19 @@
+:root {
+ /* Cores principais para fundos */
+ --color-primary: #5c899d;
+ --color-secundary: #fffcef;
+
+ --bs-primary: #5c899d;
+ --bs-secondary: #fffcef;
+/* Cores para textos */
+ --text-primary: #fffcef;
+ --text-secundary: #5c899d;
+ --text-tercery: #000000;
+
+ --background:linear-gradient(45deg, var(--color-secundary), var(--color-primary));
+
+ --paragrafo: 2em;
+} 
+*{
+    color: var(--text-tercery);
+}
