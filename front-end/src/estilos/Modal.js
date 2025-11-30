@@ -1,6 +1,7 @@
 import style from './modal.module.css';
 import InputField from './inputs';
 import SubmitButton from './submit';
+import SelectCargos from './select';
 function Modal() {
     return (
         <>
@@ -21,6 +22,30 @@ function Modal() {
               </div>
             </div>
           </div>
+          
+          <div className="modal fade" id="ModalRegistrar" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog">
+    <div className={`modal-content ${style.modal}`}>
+      <div className="modal-header">
+        <h1 className={`modal-title fs-5 ${style.logintxt}`} id="exampleModalLabel">Bem-vindo Novamente</h1>
+        <button type="button" className={`btn-close ${style.btnClose}`} data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div className="modal-body">
+        <InputField label="Nome" type="text" placeholder="Insira o seu Nome" />
+        <InputField label="Adiciona uma Fotografia" type="file" />
+        
+        {/* Select que busca os cargos da API */}
+        <SelectCargos />
+
+        <InputField label="Senha" type="password" placeholder="Digite a sua senha" />
+        <InputField label="Confirma Senha" type="password" placeholder="Digite a sua senha novamente" />
+      </div>
+      <div className="modal-footer">
+        <SubmitButton value="Registrar"/>
+      </div>
+    </div>
+  </div>
+</div>
 
           <div className="modal fade" id="modalServiceWeb" tabindex="-1" aria-labelledby="modalServiceLabel" aria-hidden="true">
             <div className="modal-dialog modal-lg">

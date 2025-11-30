@@ -54,14 +54,17 @@ function Header() {
               <li className="nav-item mx-2">
                 <a className={`nav-link fw-semibold ${styles.nav_link} ${activeLink === 'sobre' ? styles.active : ''}`} href="about" onClick={() => handleLinkClick('sobre')}>Sobre</a>
               </li>
-              <li className="nav-item mx-2">
+              {/* <li className="nav-item mx-2">
                 <a className={`nav-link fw-semibold ${styles.nav_link} ${activeLink === 'admHome' ? styles.active : ''}`} href="admHome" onClick={() => handleLinkClick('admHome')}>Admin</a>
-              </li>
+              </li> */}
             </ul>
 
             {/* Botões de Ação Desktop */}
             <div className="d-none d-lg-flex align-items-center">
               <Button value="Entrar" modal="#ModalLogin" className={styles.login} />
+            </div>
+            <div className="d-none d-lg-flex align-items-center">
+              <Button value="Registrar" modal="#ModalRegistrar" className={styles.login} />
             </div>
           </div>
         </div>
@@ -110,7 +113,7 @@ function Header() {
               <span className={styles.mobileNavLabel}>Sobre</span>
             </a>
           </li>
-          <li className={styles.mobileNavItem}>
+          {/* <li className={styles.mobileNavItem}>
             <a 
               className={`${styles.mobileNavLink} ${activeLink === 'admHome' ? styles.active : ''}`}
               href="admHome" 
@@ -119,7 +122,7 @@ function Header() {
               <div className={`${styles.mobileNavIcon} ${styles.iconAbout}`}></div>
               <span className={styles.mobileNavLabel}>ADM</span>
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <Modal />

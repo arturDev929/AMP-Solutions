@@ -85,7 +85,7 @@ function Footer() {
 
       {/* Copyright */}
       <div className={styles.copyright}>
-        <p>&copy; 2024 AMP Solutions. Todos os direitos reservados.</p>
+        <p>&copy; 2025 AMP Solutions. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
